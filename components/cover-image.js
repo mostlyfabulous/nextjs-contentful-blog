@@ -2,11 +2,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import cn from 'classnames'
 
-export default function CoverImage({ title, url, slug }) {
+export default function CoverImage({ title, url, slug , priority=false }) {
   const image = (
     <Image
-      width={2000}
-      height={1000}
+      layout='responsive'
+      priority={`${priority}`}
+      width={800}
+      height={800}
       alt={`Cover Image for ${title}`}
       className={cn('shadow-small', {
         'hover:shadow-medium transition-shadow duration-200': slug,
