@@ -3,8 +3,9 @@ import cn from 'classnames'
 import { EXAMPLE_PATH } from '../lib/constants'
 
 export default function Alert({ preview }) {
-  return (
-    {preview ?
+  return 
+  {
+    preview ?
       (
         <div
           className={cn('border-b', {
@@ -14,7 +15,6 @@ export default function Alert({ preview }) {
         >
         <Container>
           <div className="py-2 text-center text-sm">
-            
               <>
                 This is page is a preview.{' '}
                 <a
@@ -27,10 +27,10 @@ export default function Alert({ preview }) {
               </>
           </div>
         </Container>
-      </div>
-    ) : (
+        </div>
+      ) : (
       <>
       </>
-    )}
-  )
+    )
+  }
 }
